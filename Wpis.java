@@ -1,6 +1,5 @@
-//klasa abstrakcyjna
 package zadanie6;
-
 public abstract class Wpis {
-    abstract void opis();
+    /*Methods*/
+    public abstract void opis();
 }

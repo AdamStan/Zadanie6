@@ -1,24 +1,26 @@
 package zadanie6;
-class Osoba extends Wpis {
-    private String imie;
-    private String nazwisko;
-    private String adres;
-    private NrTelefoniczny numer = new NrTelefoniczny();
-    public Osoba(String n, String s,String a,NrTelefoniczny num){
-      imie = n;
-      nazwisko = s;
-      adres = a;
-      numer = num;
+public class Osoba extends Wpis {
+    private String name = "";
+    private String surname = "";
+    private String adres = "";
+    public NrTelefoniczny number = new NrTelefoniczny();
+    /*Methods*/
+    public Osoba(){    }
+    public Osoba(String n, String s, String l, NrTelefoniczny num){
+        name = n;
+        surname = s;
+        adres = l;
+        number = num;
     }
     public Osoba(Osoba copy){
-      imie = copy.imie;
-      nazwisko = copy.nazwisko;
-      adres = copy.adres;
-      numer = copy.numer;
+        name = copy.name;
+        surname = copy.surname;
+        adres = copy.adres;
+        number = copy.number;
     }
     public void opis(){
-      System.out.println("Imie i nazwisko: "+ imie + " "+nazwisko);
-      System.out.println("Adres: " + adres);
-      System.out.println("Kontakt: " + numer);
+        System.out.println("Imię i nazwisko: " + name + " " + surname);
+        System.out.println("Adres: " + adres);
+        System.out.println("Numer telefonu: " + number.toStringNowe());
     }
 }
