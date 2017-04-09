@@ -23,8 +23,8 @@ public class Zadanie6 {
         Osoba human3 = new Osoba("Czesław","Kowalski","Łódź, Narutowicza 69",numerek_2);
 
         Firma company1 = new Firma("KFC","Ameryka",numerek_main);
-        Firma company2 = new Firma("McDonald","Ameryka",numerek_main);
-        Firma company3 = new Firma("Burger King","Jakieś niemieckie",numerek_main);
+        Firma company2 = new Firma("McDonald","Ameryka",numerek_1);
+        Firma company3 = new Firma("Burger King","Jakieś niemieckie",numerek_2);
 
         human1.opis();
         human2.opis();
@@ -34,9 +34,20 @@ public class Zadanie6 {
         company2.opis();
         company3.opis();
 
-        Map<NrTelefoniczny,Osoba> phoneBook = new TreeMap<>();
-        phoneBook.put(human1.number, human1);
+        System.out.println(human1);
+        System.out.println(human2);
+        System.out.println(human3);
+        System.out.println(human1.number);
+        System.out.println(human2.number);
+        System.out.println(human3.number);
 
-        System.out.println(phoneBook);
+        Map<NrTelefoniczny,Wpis> phoneBook = new TreeMap<>();
+        phoneBook.put(human1.number, human1);
+        phoneBook.put(human2.number, human2);
+        phoneBook.put(human3.number, human3);
+        /*phoneBook.put(company1.number, company1);
+        phoneBook.put(company2.number, company2);
+        phoneBook.put(company3.number, company3);*/
+        System.out.println(phoneBook); // Dlaczego działa tylko z numerek_main???
     }
 }

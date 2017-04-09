@@ -1,4 +1,5 @@
 package zadanie6;
+ import java.util.ArrayList;
 public class Osoba extends Wpis {
     private String name = "";
     private String surname = "";
