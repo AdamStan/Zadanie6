@@ -1,5 +1,4 @@
 package zadanie6;
- import java.util.ArrayList;
 public class Osoba extends Wpis {
     private String name = "";
     private String surname = "";
@@ -21,7 +20,10 @@ public class Osoba extends Wpis {
     }
     public void opis(){
         System.out.println("Imię i nazwisko: " + name + " " + surname);
-        System.out.println("Adres: " + adres);
-        System.out.println("Numer telefonu: " + number.toStringNowe());
+        System.out.println("Adres " + adres);
+        System.out.println("Numer telefonu " + number);
+    }
+    public String toString(){
+        return String.format("%s %s, %s, %s",name, surname, adres, number);
     }
 }
