@@ -3,7 +3,7 @@ public class Osoba extends Wpis {
     private String name = "";
     private String surname = "";
     private String adres = "";
-    public NrTelefoniczny number = new NrTelefoniczny();
+    public NrTelefoniczny number;
     /*Methods*/
     public Osoba(){    }
     public Osoba(String n, String s, String l, NrTelefoniczny num){
@@ -11,6 +11,12 @@ public class Osoba extends Wpis {
         surname = s;
         adres = l;
         number = num;
+    }
+    public Osoba(String n, String s, String l, int k, long num){
+        name = n;
+        surname = s;
+        adres = l;
+        number = new NrTelefoniczny(k,num);
     }
     public Osoba(Osoba copy){
         name = copy.name;

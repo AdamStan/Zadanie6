@@ -2,13 +2,18 @@ package zadanie6;
 public class Firma extends Wpis {
     private String name = "";
     private String adres = "";
-    public NrTelefoniczny number = new NrTelefoniczny();
+    public NrTelefoniczny number;
     /*Methods*/
     public Firma(){ }
     public Firma (String n, String l, NrTelefoniczny num){
         name = n;
         adres = l; 
         number = num;
+    }
+    public Firma (String n, String l, int k, long num){
+        name = n;
+        adres = l; 
+        number = new NrTelefoniczny(k,num);
     }
     public Firma(Firma copy){
         name = copy.name;
