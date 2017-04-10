@@ -13,47 +13,33 @@ package zadanie6;
  import java.util.Iterator;
  import java.util.Set;
  import java.util.Map;
+
 public class Zadanie6 {
     public static void main(String[] args) {
-        NrTelefoniczny numerek_main = new NrTelefoniczny(48,657249131);
-        NrTelefoniczny numerek_1 = new NrTelefoniczny(48,717209814);
-        NrTelefoniczny numerek_2 = new NrTelefoniczny(48,867200549);
-        NrTelefoniczny numerek_comp1 = new NrTelefoniczny(48,857249131);
-        NrTelefoniczny numerek_comp2 = new NrTelefoniczny(48,757219814);
-        NrTelefoniczny numerek_comp3 = new NrTelefoniczny(48,681232549);
+        Osoba human1 = new Osoba("Adam","Jestem","Opoczno to wies",48,657249131);
+        Osoba human2 = new Osoba("Beata","Nowak","Łódź, Piotrkowska 138",48,717209814);
+        Osoba human3 = new Osoba("Czesław","Kowalski","Łódź, Narutowicza 69",48,867200549);
 
-        Osoba human1 = new Osoba("Adam","Jestem","Opoczno to wies",numerek_main);
-        Osoba human2 = new Osoba("Beata","Nowak","Łódź, Piotrkowska 138",numerek_1);
-        Osoba human3 = new Osoba("Czesław","Kowalski","Łódź, Narutowicza 69",numerek_2);
-
-        Firma company1 = new Firma("KFC","Ameryka",numerek_comp1);
-        Firma company2 = new Firma("McDonald","Ameryka",numerek_comp2);
-        Firma company3 = new Firma("Burger King","Jakieś niemieckie",numerek_comp3);
-
+        Firma company1 = new Firma("KFC","Ameryka",48,857249131);
+        Firma company2 = new Firma("McDonald","Ameryka",48,757219814);
+        Firma company3 = new Firma("Burger King","Jakieś niemieckie",48,681232549);
+        
         human1.opis();
         human2.opis();
         human3.opis();
-
         company1.opis();
         company2.opis();
         company3.opis();
         
-        System.out.println(human1);
-        System.out.println(human2);
-        System.out.println(human3);
-        System.out.println(company1);
-        System.out.println(company2);
-        System.out.println(company3);
-
-        TreeMap<NrTelefoniczny,Wpis> phoneBook = new TreeMap<>(); // Tylko to nie miało tak wyglądać
-        //Czy ma sens rzutowanie wpisu???
-        //To wszystko jest bez sensu...
-        phoneBook.put(human1.number, human1);
-        phoneBook.put(human2.number, human2);
-        phoneBook.put(human3.number, human3);
-        phoneBook.put(company1.number, company1);
-        phoneBook.put(company2.number, company2);
-        phoneBook.put(company3.number, company3);
+        TreeMap<String,Wpis> phoneBook = new TreeMap<String,Wpis>();
+        //Dlaczego wszystkie numery są takie same???
+        //W sensie kompilator je tak widzi
+        phoneBook.put(human1.number.toString(), human1);
+        phoneBook.put(human2.number.toString(), human2);
+        phoneBook.put(human3.number.toString(), human3);
+        phoneBook.put(company1.number.toString(), company1);
+        phoneBook.put(company2.number.toString(), company2);
+        phoneBook.put(company3.number.toString(), company3);
 
         Set set = phoneBook.entrySet();
         Iterator it = set.iterator();
