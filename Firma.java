@@ -1,16 +1,16 @@
 package zadanie6;
 public class Firma extends Wpis {
     private String name = "";
-    private String adres = "";
+    private Adres adres = ""; //trzeba pomyslec nad nazwami
     public NrTelefoniczny number;
     /*Methods*/
     public Firma(){ }
-    public Firma (String n, String l, NrTelefoniczny num){
+    public Firma (String n, Adres a, NrTelefoniczny num){
         name = n;
         adres = l; 
         number = num;
     }
-    public Firma (String n, String l, int k, long num){
+    public Firma (String n, String l, Integer k, Integer num){
         name = n;
         adres = l; 
         number = new NrTelefoniczny(k,num);

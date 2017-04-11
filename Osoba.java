@@ -2,7 +2,7 @@ package zadanie6;
 public class Osoba extends Wpis {
     private String name = "";
     private String surname = "";
-    private String adres = "";
+    private Adres adres = ""; //trzeba pomyslec nad nazwami
     public NrTelefoniczny number;
     /*Methods*/
     public Osoba(){    }
@@ -12,7 +12,7 @@ public class Osoba extends Wpis {
         adres = l;
         number = num;
     }
-    public Osoba(String n, String s, String l, int k, long num){
+    public Osoba(String n, String s, String l, Integer k, Integer num){
         name = n;
         surname = s;
         adres = l;
