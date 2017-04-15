@@ -2,34 +2,31 @@ package zadanie6;
 public class Osoba extends Wpis {
     private String name = "";
     private String surname = "";
-    private Adres adres = ""; //trzeba pomyslec nad nazwami
-    public NrTelefoniczny number;
+    private Adres location; //trzeba pomyslec nad nazwami
     /*Methods*/
-    public Osoba(){    }
-    public Osoba(String n, String s, String l, NrTelefoniczny num){
+    public Osoba(String n, String s, Adres l){
         name = n;
         surname = s;
-        adres = l;
-        number = num;
+        location = l;
     }
-    public Osoba(String n, String s, String l, Integer k, Integer num){
+    public Osoba(String n, String s, String ncity, String nstreet, int nofb, int k, int num){
         name = n;
         surname = s;
-        adres = l;
-        number = new NrTelefoniczny(k,num);
+        location = new Adres(ncity,nstreet,nofb,new NrTelefoniczny(k,num));
     }
     public Osoba(Osoba copy){
         name = copy.name;
         surname = copy.surname;
-        adres = copy.adres;
-        number = copy.number;
+        location = copy.location;
     }
     public void opis(){
         System.out.println("Imię i nazwisko: " + name + " " + surname);
-        System.out.println("Adres " + adres);
-        System.out.println("Numer telefonu " + number);
+        System.out.println("Adres: " + location);
     }
     public String toString(){
-        return String.format("%s %s, %s, %s",name, surname, adres, number);
+        return String.format("%s %s, %s",name, surname, location);
+    }
+    public Adres getAdres(){
+        return location;
     }
 }

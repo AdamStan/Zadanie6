@@ -11,6 +11,10 @@ public class NrTelefoniczny implements Comparable<NrTelefoniczny> {
         nrkierunkowy = k;
         nrTelefonu = tele;
     }
+    public NrTelefoniczny(NrTelefoniczny copy){
+        nrkierunkowy = copy.nrkierunkowy;
+        nrTelefonu = copy.nrTelefonu;
+    }
     public String toString(){
         return String.format("%d %d", nrkierunkowy, nrTelefonu);
     }
