@@ -9,6 +9,11 @@ public class Osoba extends Wpis {
         surname = s;
         location = l;
     }
+    public Osoba(String n, String s, String ncity, String nstreet, int nofb, NrTelefoniczny num){
+        name = n;
+        surname = s;
+        location = new Adres(ncity,nstreet,nofb,num);
+    }
     public Osoba(String n, String s, String ncity, String nstreet, int nofb, int k, int num){
         name = n;
         surname = s;

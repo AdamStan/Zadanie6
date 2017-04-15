@@ -11,6 +11,10 @@ public class Firma extends Wpis {
         name = n;
         location = new Adres(city,street,number,new NrTelefoniczny(k,num));
     }
+    public Firma (String n, String city, String street, int number, NrTelefoniczny num){
+        name = n;
+        location = new Adres(city,street,number,num);
+    }
     public Firma(Firma copy){
         name = copy.name;
         location = copy.location;
