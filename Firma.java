@@ -7,11 +7,11 @@ public class Firma extends Wpis {
         name = n;
         location = l;
     }
-    public Firma (String n, String city, String street, int number, int k, int num){
+    public Firma (String n, String city, String street, String number, int k, int num){
         name = n;
         location = new Adres(city,street,number,new NrTelefoniczny(k,num));
     }
-    public Firma (String n, String city, String street, int number, NrTelefoniczny num){
+    public Firma (String n, String city, String street, String number, NrTelefoniczny num){
         name = n;
         location = new Adres(city,street,number,num);
     }

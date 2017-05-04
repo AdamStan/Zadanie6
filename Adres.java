@@ -3,15 +3,15 @@ package zadanie6;
 public class Adres {
     private String city;
     private String street;
-    private Integer numberOfBuilding;
+    private String numberOfBuilding;
     private NrTelefoniczny numberOfPhone;
-    public Adres(String c, String s, int n, NrTelefoniczny num){
+    public Adres(String c, String s, String n, NrTelefoniczny num){
         city = c;
         street = s;
         numberOfBuilding = n;
         numberOfPhone = num;
     }
-    public Adres(String c, String s, int n, int k, int num){
+    public Adres(String c, String s, String n, int k, int num){
         city = c;
         street = s;
         numberOfBuilding = n;

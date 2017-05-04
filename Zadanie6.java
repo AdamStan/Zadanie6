@@ -15,15 +15,24 @@ package zadanie6;
  import java.util.Map;
 
 public class Zadanie6 {
+    public static void wypiszIteratorem(TreeMap<NrTelefoniczny,Wpis> table){
+	Set set = table.entrySet();
+        Iterator it = set.iterator();
+        while(it.hasNext()){
+            Map.Entry buff = (Map.Entry)it.next();
+            System.out.print(buff.getKey() + " => ");
+            System.out.println(buff.getValue());
+        }
+    }
     public static void main(String[] args) {
 
-        Osoba human1 = new Osoba("Adam","Jestem","Opoczno","Piotrkowska",120,48,657249131);
-        Osoba human2 = new Osoba("Beata", "Nowak", "Łódź", "Kościuszki", 138, 48, 717209814);
-        Osoba human3 = new Osoba("Czesław", "Kowalski", "Łódź", "Narutowicza", 69, 48, 867200549);
+        Osoba human1 = new Osoba("Adam","Jestem","Opoczno","Piotrkowska","120",48,657249131);
+        Osoba human2 = new Osoba("Beata", "Nowak", "Łódź", "Kościuszki", "138", 48, 717209814);
+        Osoba human3 = new Osoba("Czesław", "Kowalski", "Łódź", "Narutowicza", "69a", 48, 867200549);
 
-        Firma company1 = new Firma("KFC", "Warszawa", "Aleje Jerozolimskie", 102, 48, 857249131);
-        Firma company2 = new Firma("McDonald", "Warszawa", "Aleje Jerozolimskie", 94, 48, 757219814);
-        Firma company3 = new Firma("Burger King", "Warszawa", "Aleje Jerozolimskie", 16, 48, 681232549);
+        Firma company1 = new Firma("KFC", "Warszawa", "Aleje Jerozolimskie", "102", 48, 857249131);
+        Firma company2 = new Firma("McDonald", "Warszawa", "Aleje Jerozolimskie", "94", 48, 757219814);
+        Firma company3 = new Firma("Burger King", "Warszawa", "Aleje Jerozolimskie", "16", 48, 681232549);
 
         human1.opis();
         human2.opis();
@@ -40,12 +49,6 @@ public class Zadanie6 {
         phoneBook.put(company2.getAdres().getNumberOfPhone(), company2);
         phoneBook.put(company3.getAdres().getNumberOfPhone(), company3);
 
-        Set set = phoneBook.entrySet();
-        Iterator it = set.iterator();
-        while(it.hasNext()){
-            Map.Entry buff = (Map.Entry)it.next();
-            System.out.print(buff.getKey() + " => ");
-            System.out.println(buff.getValue());
-        }
+        wypiszIteratorem(phoneBook);
     }
 }

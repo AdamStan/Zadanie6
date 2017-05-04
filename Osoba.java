@@ -1,7 +1,7 @@
 package zadanie6;
 public class Osoba extends Wpis {
-    private String name = "";
-    private String surname = "";
+    private String name;
+    private String surname;
     private Adres location; //trzeba pomyslec nad nazwami
     /*Methods*/
     public Osoba(String n, String s, Adres l){
@@ -9,12 +9,12 @@ public class Osoba extends Wpis {
         surname = s;
         location = l;
     }
-    public Osoba(String n, String s, String ncity, String nstreet, int nofb, NrTelefoniczny num){
+    public Osoba(String n, String s, String ncity, String nstreet, String nofb, NrTelefoniczny num){
         name = n;
         surname = s;
         location = new Adres(ncity,nstreet,nofb,num);
     }
-    public Osoba(String n, String s, String ncity, String nstreet, int nofb, int k, int num){
+    public Osoba(String n, String s, String ncity, String nstreet, String nofb, int k, int num){
         name = n;
         surname = s;
         location = new Adres(ncity,nstreet,nofb,new NrTelefoniczny(k,num));
