@@ -26,17 +26,9 @@ public class NrTelefoniczny implements Comparable<NrTelefoniczny> {
         else return 1;
     }
     public int getNrkierunkowy(){
-        Integer buff = new Integer(nrkierunkowy);
-        /* Integer jest klasą, zwracana jest referencja do obiektu
-        kiedy mamy:
         return nrkierunkowy;
-        to zwracamy referencje do obiektu (nie wartość)
-        dlatego musisz utworzyc nowy obiekt, nie bedzie mozliwosci
-        modyfikowania wartosci prywatnej dzieki temu*/
-        return buff;
     }
     public long getNrTelefonu(){
-        Integer buff = new Integer(nrTelefonu);
-        return buff;
+        return nrTelefonu;
     }
 }
