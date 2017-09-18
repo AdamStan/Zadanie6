@@ -32,6 +32,7 @@ public class Osoba extends Wpis {
         return String.format("%s %s, %s",name, surname, location);
     }
     public Adres getAdres(){
-        return location;
+        Adres buff = new Adres(location);
+        return buff;
     }
 }
